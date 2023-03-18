@@ -1,0 +1,103 @@
+<ion-content mode="ios">
+  <ion-grid >
+    <ion-row class="ion-justify-content-start ion-align-items-center ion-nowrap" >
+      <ion-col size="auto">
+        <div class="div-linea-azul"></div>
+      </ion-col>
+      <ion-col size="auto">
+        <ion-row>
+          <ion-label class="titulo">Ficha de Identificación</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-label class="subtitulo">Datos básicos del paciente. NOM-004 SSA2012 6.1.1</ion-label>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked">Nombre del paciente</ion-label>
+          <ion-input autocomplete="off" autocapitalize="words" placeholder="Nombre completo"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime 
+            [showDefaultButtons]="true"
+            doneText="Listo"
+            cancelText="Cancelar"
+            presentation="date" 
+            locale="es-ES" 
+            id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-col>
+    </ion-row>
+
+    <ion-radio-group mode="md">
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label>Masculino</ion-label>
+            <ion-radio value="Masculino"></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item lines="none">
+            <ion-label>Femenino</ion-label>
+            <ion-radio value="Femenino"></ion-radio>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input placeholder="Si no tiene, dejar en blanco" type="email" ngModel email></ion-input>
+          <ion-note slot="helper">Ingresa un email válido</ion-note>
+          <ion-note slot="error">Email inválido</ion-note>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none" counter="true">
+          <ion-label position="stacked">Teléfono</ion-label>
+          <ion-input placeholder="Si no tiene, dejar en blanco" type="tel" maxlength="10"></ion-input>
+          <ion-note slot="helper">Ingresa teléfono válido</ion-note>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked">Nombre del paciente</ion-label>
+          <ion-input placeholder="Nombre completo"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-select interface="popover" placeholder="Select fruit">
+            <ion-select-option value="apples">Apples</ion-select-option>
+            <ion-select-option value="oranges">Oranges</ion-select-option>
+            <ion-select-option value="bananas">Bananas</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

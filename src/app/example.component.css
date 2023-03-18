@@ -1,0 +1,54 @@
+.div-linea-azul {
+  height: 50px;
+  width: 4px;
+  border-radius: 2px;
+  background-color: #337bfb;
+}
+.titulo {
+  font-weight: 700;
+font-size: 18px;
+}
+.subtitulo {
+  font-weight: 500;
+  font-size: 14px;
+  color: #919191;
+}
+ion-item {
+  --background: #f7f8fa;
+  --border-radius: 10px;
+  --min-height: 50px;
+  --height: 50px;
+}
+ion-input {
+  --border-radius: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.label-stacked.sc-ion-label-ios-h {
+  margin-bottom: 0;
+  margin-top: 7px;
+  font-size: 12px;
+  color: #909090;
+  font-weight: 500;
+}
+.item-label-stacked .sc-ion-input-ios-h {
+  --padding-top: 0;
+}
+
+ion-note {
+  padding-top: 0;
+}
+ion-item {
+  padding-top: 0;
+  --ripple-color: transparent;
+}
+.ion-datetime-button-overlay {
+  --border-radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  ion-item {
+    --background: #131927;
+  }
+}

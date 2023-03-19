@@ -78,6 +78,9 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
+ion-item:last-child{
+  --inner-border-width:0;
+}
 
 @media (prefers-color-scheme: dark) {
   /*

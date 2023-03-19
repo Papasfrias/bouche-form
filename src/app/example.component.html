@@ -1,6 +1,8 @@
 <ion-content mode="ios">
-  <ion-grid >
-    <ion-row class="ion-justify-content-start ion-align-items-center ion-nowrap" >
+  <ion-grid>
+    <ion-row
+      class="ion-justify-content-start ion-align-items-center ion-nowrap"
+    >
       <ion-col size="auto">
         <div class="div-linea-azul"></div>
       </ion-col>
@@ -9,7 +11,9 @@
           <ion-label class="titulo">Ficha de Identificación</ion-label>
         </ion-row>
         <ion-row>
-          <ion-label class="subtitulo">Datos básicos del paciente. NOM-004 SSA2012 6.1.1</ion-label>
+          <ion-label class="subtitulo"
+            >Datos básicos del paciente. NOM-004 SSA2012 6.1.1</ion-label
+          >
         </ion-row>
       </ion-col>
     </ion-row>
@@ -18,25 +22,12 @@
       <ion-col>
         <ion-item lines="none">
           <ion-label position="stacked">Nombre del paciente</ion-label>
-          <ion-input autocomplete="off" autocapitalize="words" placeholder="Nombre completo"></ion-input>
+          <ion-input
+            autocomplete="off"
+            autocapitalize="words"
+            placeholder="Nombre completo"
+          ></ion-input>
         </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-datetime-button datetime="datetime"></ion-datetime-button>
-        <ion-modal [keepContentsMounted]="true">
-          <ng-template>
-            <ion-datetime 
-            [showDefaultButtons]="true"
-            doneText="Listo"
-            cancelText="Cancelar"
-            presentation="date" 
-            locale="es-ES" 
-            id="datetime"></ion-datetime>
-          </ng-template>
-        </ion-modal>
       </ion-col>
     </ion-row>
 
@@ -59,9 +50,32 @@
 
     <ion-row>
       <ion-col>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime
+              [showDefaultButtons]="true"
+              doneText="Listo"
+              cancelText="Cancelar"
+              presentation="date"
+              locale="es-ES"
+              id="datetime"
+            ></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
         <ion-item lines="none">
           <ion-label position="stacked">Email</ion-label>
-          <ion-input placeholder="Si no tiene, dejar en blanco" type="email" ngModel email></ion-input>
+          <ion-input
+            placeholder="Si no tiene, dejar en blanco"
+            type="email"
+            ngModel
+            email
+          ></ion-input>
           <ion-note slot="helper">Ingresa un email válido</ion-note>
           <ion-note slot="error">Email inválido</ion-note>
         </ion-item>
@@ -72,7 +86,11 @@
       <ion-col>
         <ion-item lines="none" counter="true">
           <ion-label position="stacked">Teléfono</ion-label>
-          <ion-input placeholder="Si no tiene, dejar en blanco" type="tel" maxlength="10"></ion-input>
+          <ion-input
+            placeholder="Si no tiene, dejar en blanco"
+            type="tel"
+            maxlength="10"
+          ></ion-input>
           <ion-note slot="helper">Ingresa teléfono válido</ion-note>
         </ion-item>
       </ion-col>
@@ -81,8 +99,11 @@
     <ion-row>
       <ion-col>
         <ion-item lines="none">
-          <ion-label position="stacked">Nombre del paciente</ion-label>
-          <ion-input placeholder="Nombre completo"></ion-input>
+          <ion-label position="stacked">Ocupación</ion-label>
+          <ion-input
+            autocapitalize="on"
+            placeholder="De oficina o físico"
+          ></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
@@ -90,14 +111,80 @@
     <ion-row>
       <ion-col>
         <ion-item lines="none">
-          <ion-select interface="popover" placeholder="Select fruit">
-            <ion-select-option value="apples">Apples</ion-select-option>
-            <ion-select-option value="oranges">Oranges</ion-select-option>
-            <ion-select-option value="bananas">Bananas</ion-select-option>
+          <ion-select interface="popover" placeholder="Escolaridad">
+            <ion-select-option value="Básica">Básica</ion-select-option>
+            <ion-select-option value="Medio-Superior"
+              >Medio-Superior</ion-select-option
+            >
+            <ion-select-option value="Superior">Superior</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-select interface="popover" placeholder="Estado Civil">
+            <ion-select-option value="Soltero">Soltero</ion-select-option>
+            <ion-select-option value="Casado">Casado</ion-select-option>
+            <ion-select-option value="Concubinato"
+              >Concubinato</ion-select-option
+            >
+            <ion-select-option value="Divorciado">Divorciado</ion-select-option>
+            <ion-select-option value="Viudo">Viudo</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-col>
     </ion-row>
 
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked">Religión</ion-label>
+          <ion-input autocapitalize="on"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >Deportes o actividades físicas</ion-label
+          >
+          <ion-input autocapitalize="on"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-select interface="popover" placeholder="G. Sanguíneo">
+            <ion-select-option value="A">A</ion-select-option>
+            <ion-select-option value="B">B</ion-select-option>
+            <ion-select-option value="AB">AB</ion-select-option>
+            <ion-select-option value="0">0</ion-select-option>
+            <ion-select-option value="Desconoce">Desconoce</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-select interface="popover" placeholder="Factor R.H.">
+            <ion-select-option value="Positivo">Positivo</ion-select-option>
+            <ion-select-option value="Negativo">Negativo</ion-select-option>
+            <ion-select-option value="Desconoce">Desconoce</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item lines="none">
+          <ion-label position="stacked">Lugar de nacimiento</ion-label>
+          <ion-input autocapitalize="on"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>
